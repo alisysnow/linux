@@ -1,3 +1,5 @@
+#virt-xml-validate to validate args
+
 <domain xmlns:qemu="http://libvirt.org/schemas/domain/qemu/1.0" type="kvm">
   <name>apfelvm</name>
   <uuid>d06d502a-904a-4b34-847d-debf1a3d76c7</uuid>
