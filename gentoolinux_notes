@@ -1,0 +1,15 @@
+lvm on luks source linux 
+
+cp --dereference /etc/resolv.conf /mnt/linuxD/etc/
+
+mount --types proc /proc /mnt/linuxD/proc
+mount --rbind /sys /mnt/linuxD/sys
+mount --make-rslave /mnt/linuxD/sys
+mount --rbind /dev /mnt/linuxD/dev
+mount --make-rslave /mnt/linuxD/dev 
+chroot /mnt/linuxD/ /bin/bash
+source /etc/profile
+export PS1="(linuxD) ${PS1}"
+mount /dev/mapper/vg01-home /mnt/linuxD/home/
+mount /dev/nvme0n1p2 /mnt/linuxD/boot/
+mount /dev/nvme0n1p1 /mnt/linuxD/boot/efi
