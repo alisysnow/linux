@@ -19,3 +19,13 @@ mount --make-rslave /mnt/linuxD/dev
 chroot /mnt/linuxD/ /bin/bash
 source /etc/profile
 export PS1="(linuxD) ${PS1}"
+
+... fff(╯°□°)╯︵ ┻━┻ 
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+  WARNING: Failed to connect to lvmetad. Falling back to device scanning
+  and no boot:c
