@@ -1,4 +1,13 @@
 lvm on luks source linux 
+cryptsetup luksOpen /dev/nvme0n1p3 vg01
+ls /dev/mapper
+>> control  vg0  vg0-root	vg01  vg01-home  vg01-root
+:X
+
+mount /dev/mapper/vg01-root /mnt/linuxD/
+mount /dev/mapper/vg01-home /mnt/linuxD/home/
+mount /dev/nvme0n1p2 /mnt/linuxD/boot/
+mount /dev/nvme0n1p1 /mnt/linuxD/boot/efi
 
 cp --dereference /etc/resolv.conf /mnt/linuxD/etc/
 
@@ -10,6 +19,3 @@ mount --make-rslave /mnt/linuxD/dev
 chroot /mnt/linuxD/ /bin/bash
 source /etc/profile
 export PS1="(linuxD) ${PS1}"
-mount /dev/mapper/vg01-home /mnt/linuxD/home/
-mount /dev/nvme0n1p2 /mnt/linuxD/boot/
-mount /dev/nvme0n1p1 /mnt/linuxD/boot/efi
