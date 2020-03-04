@@ -19,6 +19,7 @@ mount --make-rslave /mnt/linuxD/dev
 chroot /mnt/linuxD/ /bin/bash
 source /etc/profile
 export PS1="(linuxD) ${PS1}"
+grub-mkconfig -o /boot/grub/grub.cfg
 
 ... fff(╯°□°)╯︵ ┻━┻ 
   WARNING: Failed to connect to lvmetad. Falling back to device scanning.
@@ -28,7 +29,7 @@ export PS1="(linuxD) ${PS1}"
   WARNING: Failed to connect to lvmetad. Falling back to device scanning.
   WARNING: Failed to connect to lvmetad. Falling back to device scanning.
   WARNING: Failed to connect to lvmetad. Falling back to device scanning
-  and no boot:c
+  and no boot (cant see rootfs):c
 so i try add /run mount
 mkdir /mnt/hostrun
 mount --bind /run /mnt/hostrun
@@ -37,7 +38,7 @@ mkdir /run/lvm
 mount --bind /hostrun/lvm /run/lvm
 grub-mkconfig -o /boot/grub/grub.cfg
 
-direct kernel boot fails in kernel panic (cant see root) but grub this time booting initramfs boots/unlocks root c:
+direct kernel boot fails in kernel panic (cant see rootfs) but grub this time booting initramfs boots/unlocks root c:
 however using systemd in this mkinitcpio initramfs so is looking for udev :|
 https://i.imgur.com/UqXahGM.jpg
 but lvm on luks unlocks correctly  this time :))
