@@ -1,2 +1,0 @@
-127.0.0.1 4chan.org
-127.0.0.1 boards.4channel.org
