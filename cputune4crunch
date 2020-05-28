@@ -1,0 +1,43 @@
+cpu split smh
+
+01 
+ <currentMemory unit="KiB">31249408</currentMemory>
+  <vcpu placement="static">19</vcpu>
+  <cputune>
+    <vcpupin vcpu="0" cpuset="0"/>
+    <vcpupin vcpu="1" cpuset="1"/>
+    <vcpupin vcpu="2" cpuset="2"/>
+    <vcpupin vcpu="3" cpuset="3"/>
+    <vcpupin vcpu="4" cpuset="4"/>
+    <vcpupin vcpu="5" cpuset="5"/>
+    <vcpupin vcpu="6" cpuset="6"/>
+    <vcpupin vcpu="7" cpuset="7"/>
+    <vcpupin vcpu="8" cpuset="8"/>
+    <vcpupin vcpu="9" cpuset="9"/>
+    <vcpupin vcpu="10" cpuset="10"/>
+    <vcpupin vcpu="11" cpuset="11"/>
+    <vcpupin vcpu="12" cpuset="12"/>
+    <vcpupin vcpu="13" cpuset="13"/>
+    <vcpupin vcpu="14" cpuset="14"/>
+    <vcpupin vcpu="15" cpuset="15"/>
+    <vcpupin vcpu="16" cpuset="16"/>
+    <vcpupin vcpu="17" cpuset="17"/>
+    <vcpupin vcpu="18" cpuset="18"/>
+    <emulatorpin cpuset="0-19"/>
+  </cputune>
+  
+  02
+  <currentMemory unit="KiB">15624192</currentMemory>
+  <vcpu placement="static">8</vcpu>
+  <cputune>
+    <vcpupin vcpu="0" cpuset="20"/>
+    <vcpupin vcpu="1" cpuset="21"/>
+    <vcpupin vcpu="2" cpuset="22"/>
+    <vcpupin vcpu="3" cpuset="23"/>
+    <vcpupin vcpu="4" cpuset="24"/>
+    <vcpupin vcpu="5" cpuset="25"/>
+    <vcpupin vcpu="6" cpuset="26"/>
+    <vcpupin vcpu="7" cpuset="27"/>
+    <emulatorpin cpuset="20-29"/>
+  </cputune>
+  
